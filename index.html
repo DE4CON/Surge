@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    /* General Styles */
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -145,52 +144,52 @@
     }
 
     .features-carousel {
-      display: flex;
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      justify-content: center;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
     }
 
     .features-carousel-inner {
-      display: flex;
-      animation: slide 12s linear infinite;
+    display: flex;
+    width: calc(200%);
+    animation: slide 10s linear infinite;
     }
 
     @keyframes slide {
-      0% {
+    from {
         transform: translateX(0);
-      }
-      100% {
+    }
+    to {
         transform: translateX(-50%);
-      }
+    }
     }
 
     .feature-panel {
-      min-width: 300px;
-      height: 300px;
-      margin: 0 15px;
-      background: #2A292F;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 300px;
+    height: 300px;
+    margin: 0 15px;
+    background: #2A292F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .feature-panel i {
-      font-size: 4.5rem;
-      margin-bottom: 1rem;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
     }
 
     .feature-panel:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     }
 
     #faq {
@@ -295,50 +294,71 @@
   <section id="advanced-features">
     <h2>Features</h2>
     <div class="features-carousel">
-      <div class="features-carousel-inner">
-        <div class="feature-panel">
-          <i class="fas fa-laptop-code"></i>
-          <h3>Powerful Engine</h3>
-          <p>Advanced execution engine supporting all Roblox versions</p>
-        </div>
-        <div class="feature-panel">
-          <i class="fas fa-scroll"></i>
-          <h3>Script Library</h3>
-          <p>Access thousands of pre-made scripts and tools</p>
-        </div>
-        <div class="feature-panel">
-          <i class="fas fa-shield-alt"></i>
-          <h3>Anti-Detection</h3>
-          <p>Stay undetected with our advanced protection system</p>
-        </div>
-        <div class="feature-panel">
-          <i class="fas fa-bolt"></i>
-          <h3>Fast Updates</h3>
-          <p>Regular updates to maintain compatibility and performance</p>
-        </div>
-        <div class="feature-panel">
-          <i class="fas fa-download"></i>
-          <h3>Auto-Inject</h3>
-          <p>Seamless injection process with auto-attach feature</p>
-        </div>
-        <div class="feature-panel">
-          <i class="fas fa-clock"></i>
-          <h3>24/7 Support</h3>
-          <p>Round-the-clock Discord support for all users</p>
-        </div>
-        <div class="feature-panel">
-          <i class="fas fa-desktop"></i>
-          <h3>Intuitive UI</h3>
-          <p>Simple and clean interface for seamless navigation</p>
-        </div>
-        <div class="feature-panel">
-          <i class="fas fa-lock"></i>
-          <h3>Enhanced Security</h3>
-          <p>Top-tier encryption for your scripts and data</p>
+        <div class="features-carousel-inner">
+          <div class="feature-panel">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Powerful Engine</h3>
+            <p>Advanced execution engine supporting all Roblox versions</p>
+          </div>
+          <div class="feature-panel">
+            <i class="fas fa-scroll"></i>
+            <h3>Script Library</h3>
+            <p>Access thousands of pre-made scripts and tools</p>
+          </div>
+          <div class="feature-panel">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Anti-Detection</h3>
+            <p>Stay undetected with our advanced protection system</p>
+          </div>
+          <div class="feature-panel">
+            <i class="fas fa-bolt"></i>
+            <h3>Fast Updates</h3>
+            <p>Regular updates to maintain compatibility and performance</p>
+          </div>
+          <div class="feature-panel">
+            <i class="fas fa-download"></i>
+            <h3>Auto-Inject</h3>
+            <p>Seamless injection process with auto-attach feature</p>
+          </div>
+          <div class="feature-panel">
+            <i class="fas fa-clock"></i>
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock Discord support for all users</p>
+          </div>
+          <div class="feature-panel">
+            <i class="fas fa-desktop"></i>
+            <h3>Intuitive UI</h3>
+            <p>Simple and clean interface for seamless navigation</p>
+          </div>
+          <div class="feature-panel">
+            <i class="fas fa-lock"></i>
+            <h3>Enhanced Security</h3>
+            <p>Top-tier encryption for your scripts and data</p>
+          </div>
+          <!-- Duplicate Panels -->
+          <div class="feature-panel">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Powerful Engine</h3>
+            <p>Advanced execution engine supporting all Roblox versions</p>
+          </div>
+          <div class="feature-panel">
+            <i class="fas fa-scroll"></i>
+            <h3>Script Library</h3>
+            <p>Access thousands of pre-made scripts and tools</p>
+          </div>
+          <div class="feature-panel">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Anti-Detection</h3>
+            <p>Stay undetected with our advanced protection system</p>
+          </div>
+          <div class="feature-panel">
+            <i class="fas fa-bolt"></i>
+            <h3>Fast Updates</h3>
+            <p>Regular updates to maintain compatibility and performance</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+        </section>
 
   <section id="faq">
     <h2>FAQ</h2>
