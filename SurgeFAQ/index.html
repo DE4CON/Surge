@@ -11,6 +11,7 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #121118;
       color: #7A7693;
+      overflow-x: hidden;
     }
 
     header {
@@ -20,10 +21,18 @@
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header img {
       height: 60px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header img:hover {
+      transform: rotate(360deg) scale(1.1);
     }
 
     nav a {
@@ -31,17 +40,19 @@
       text-decoration: none;
       margin: 0 0.5rem;
       font-size: 1.2rem;
-      transition: color 0.3s;
+      transition: color 0.3s ease-in-out;
     }
 
     nav a:hover {
       color: #FFFFFF;
+      transform: scale(1.1);
     }
 
     #faq {
       padding: 5rem 2rem;
       background: #1C1C24;
       color: white;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     #faq h2 {
@@ -49,37 +60,68 @@
       margin-bottom: 2rem;
       text-align: center;
       text-transform: uppercase;
+      animation: slideInDown 1s ease-in-out;
+    }
+
+    .faq-item-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 2rem;
     }
 
     .faq-item {
-      max-width: 800px;
-      margin: 1rem auto;
+      flex: 1 1 calc(45% - 2rem);
+      max-width: 45%;
       padding: 1rem;
       border: 1px solid #7A7693;
-      border-radius: 5px;
+      border-radius: 8px;
       background: #2A292F;
       cursor: pointer;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.3s, transform 0.3s ease-in-out;
+      animation: zoomIn 0.5s ease-in-out;
     }
 
     .faq-item:hover {
       background: #1C1C24;
       color: #FFFFFF;
+      transform: translateY(-5px);
     }
 
     .faq-item h3 {
       font-size: 1.5rem;
       margin: 0;
+      transition: color 0.3s ease-in-out;
     }
 
     .faq-item p {
       font-size: 1.1rem;
       margin: 0.5rem 0 0;
       display: none;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s, transform 0.3s;
     }
 
     .faq-item.active p {
       display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
@@ -87,46 +129,48 @@
   <header>
     <img src="Surgelogo.png" alt="Surge Logo">
     <nav>
-      <a href="../">Home</a>
+      <a href="../index.html">Home</a>
       <a href="#faq">FAQ</a>
-      <a href="../SurgeSupport/">Support</a>
-      <a href="../SurgeTOS/">Terms of Service</a>
+      <a href="../SurgeSupport/index.html">Support</a>
+      <a href="../SurgeTOS/index.html">Terms of Service</a>
     </nav>
   </header>
 
   <section id="faq">
     <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>What is Surge Executor?</h3>
-      <p>Surge Executor is a powerful tool designed for enhancing your Roblox gameplay experience.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Is Surge Executor safe to use?</h3>
-      <p>Yes, it is built with advanced security measures to ensure safety.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How do I install Surge Executor?</h3>
-      <p>You can download and install Surge Executor from our official website.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What features does Surge Executor provide?</h3>
-      <p>It offers an advanced execution engine, script library, intuitive UI, and robust security.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How can I contact support?</h3>
-      <p>Visit our <a href="../SurgeSupport/">Support Page</a> for assistance.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Is Surge Executor free?</h3>
-      <p>We offer both free and premium plans. Check our website for more details.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Can I use Surge Executor on multiple devices?</h3>
-      <p>Yes, as long as you use the same account.</p>
-    </div>
-    <div class="faq-item">
-      <h3>What should I do if I face issues?</h3>
-      <p>Contact support or check our community forums for solutions.</p>
+    <div class="faq-item-container">
+      <div class="faq-item">
+        <h3>What is Surge Executor?</h3>
+        <p>Surge Executor is a powerful tool designed for enhancing your Roblox gameplay experience.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is Surge Executor safe to use?</h3>
+        <p>Yes, it is built with advanced security measures to ensure safety.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I install Surge Executor?</h3>
+        <p>You can download and install Surge Executor from our official website.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What features does Surge Executor provide?</h3>
+        <p>It offers an advanced execution engine, script library, intuitive UI, and robust security.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I contact support?</h3>
+        <p>Visit our <a href="../SurgeSupport/index.html">Support Page</a> for assistance.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is Surge Executor free?</h3>
+        <p>We offer both free and premium plans. Check our website for more details.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use Surge Executor on multiple devices?</h3>
+        <p>Yes, as long as you use the same account.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What should I do if I face issues?</h3>
+        <p>Contact support or check our community forums for solutions.</p>
+      </div>
     </div>
   </section>
 
