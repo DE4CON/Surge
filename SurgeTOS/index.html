@@ -12,12 +12,11 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #121118;
       color: #7A7693;
-      line-height: 1.6;
-      padding: 2rem;
+      overflow-x: hidden;
     }
 
     header {
-      background: #1C1C24;
+      background: #1a1a23;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -28,16 +27,41 @@
       z-index: 1000;
     }
 
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
     header img {
-      height: 60px;
+      height: 50px;
+      margin-right: 1rem;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    header img:hover {
+      transform: rotate(360deg) scale(1.1);
+    }
+
+    .header-title {
+      color: #FFFFFF;
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
     }
 
     nav a {
-      color: #7A7693;
+      color: #f5edff;
       text-decoration: none;
-      margin: 0 0.5rem;
-      font-size: 1.2rem;
+      margin: 0 1rem;
+      font-size: 1rem;
       position: relative;
+      transition: color 0.3s ease;
     }
 
     nav a::after {
@@ -45,7 +69,7 @@
       position: absolute;
       width: 0;
       height: 2px;
-      background: #FFFFFF;
+      background: #A381D0;
       left: 50%;
       bottom: -5px;
       transition: width 0.3s ease, left 0.3s ease;
@@ -92,13 +116,14 @@
   <header>
     <img src="Surgelogo.png" alt="Surge Logo">
     <nav>
-      <a href="../">Home</a>
-      <a href="../SurgeAM/">About Us</a>
-      <a href="../SurgeFAQ/">FAQ</a>
-      <a href="../SurgeSupport/">Support</a>
-      <a href="../SurgeTOS/">Terms of Service</a>
-    </nav>
-  </header>
+        <a href="#hero" class="active">Home</a>
+        <a href="SurgePayments/index.html">Purchase</a>
+        <a href="#advanced-features">Features</a>
+        <a href="SurgeSupport/index.html">Support</a>
+        <a href="SurgeFAQ/index.html">FAQ</a>
+        <a href="SurgeTOS/index.html">TOS</a>
+      </nav>
+    </header>
 
   <div class="content">
     <h1>Terms of Service</h1>
