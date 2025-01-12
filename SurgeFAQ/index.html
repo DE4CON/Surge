@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Surge Executor</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #1C1C24;
+      color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #1C1C24;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      color: #7A7693;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.2rem;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #A381D0;
+      left: 50%;
+      bottom: -5px;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    nav a:hover {
+      color: #A381D0;
+    }
+
+    #faq {
+      padding: 2rem 2rem;
+      background: #1C1C24;
+      color: white;
+      text-align: center;
+    }
+
+    #faq h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .faq-item {
+      background: #2A292F;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #7A7693;
+      margin: 0.75rem auto;
+      max-width: 66%;
+      transition: transform 0.3s, background 0.3s;
+      cursor: pointer;
+    }
+
+    .faq-item:hover {
+      background: #1C1C24;
+      transform: translateY(-3px);
+    }
+
+    .faq-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #FFFFFF;
+    }
+
+    .faq-item p {
+      font-size: 0.9rem;
+      color: #CCCCCC;
+      line-height: 1.4;
+      display: none;
+    }
+
+    .faq-item.active p {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1C1C24;
+      color: #7A7693;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Surgelogo.png" alt="Surge Logo">
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../SurgePayments/index.html">Purchase</a>
+      <a href="../index.html#advanced-features">Features</a>
+      <a href="../SurgeSupport/index.html">Support</a>
+      <a href="../SurgeFAQ/index.html">FAQ</a>
+      <a href="../SurgeTOS/index.html">TOS</a>
+    </nav>
+  </header>
+
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div>
+      <div class="faq-item">
+        <h3>What is Surge Executor?</h3>
+        <p>Surge Executor is a powerful tool designed for enhancing your Roblox gameplay experience.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is Surge Executor safe to use?</h3>
+        <p>Yes, it is built with advanced security measures to ensure safety.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I install Surge Executor?</h3>
+        <p>You can download and install Surge Executor from our official website.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What features does Surge Executor provide?</h3>
+        <p>It offers an advanced execution engine, script library, intuitive UI, and robust security.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I contact support?</h3>
+        <p>Visit our <a href="../SurgeSupport/index.html">Support Page</a> for assistance.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is Surge Executor free?</h3>
+        <p>We offer both free and premium plans. Check our website for more details.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use Surge Executor on multiple devices?</h3>
+        <p>Yes, as long as you use the same account.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What should I do if I face issues?</h3>
+        <p>Contact support or check our community forums for solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Surge Executor. All rights reserved.</p>
+  </footer>
+</body>
+</html>
